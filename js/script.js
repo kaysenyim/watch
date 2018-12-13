@@ -66,3 +66,45 @@ function autoResize(element, nativeSize) {
     update()
     window.addEventListener('resize', update)
 }
+
+document.onkeydown=function(){
+    with(window.event){
+        event.keyCode=0;event.returnValue=false;
+    }
+}
+
+document.oncontextmenu = function(){
+    event.returnValue = false;
+    return false;
+}
+
+document.onselectstart = function(){
+    event.returnValue = false;
+    return false;
+}
+
+document.oncopy = function(){
+    event.returnValue = false;
+    return false;
+}
+
+document.onmousedown = function(e){
+    if ( e.which == 2 ){
+        return false;
+    }
+    if( e.which==3 ){
+        return false;
+    }
+}
+
+document.onkeydown = function(){
+    if( event.ctrlKey ){
+        return false;
+    }
+    if ( event.altKey ){
+        return false;
+    }
+    if ( event.shiftKey ){
+        return false;
+    }
+}

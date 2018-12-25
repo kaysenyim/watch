@@ -67,11 +67,15 @@ function autoResize(element, nativeSize) {
     window.addEventListener('resize', update)
 }
 
-document.onkeydown=function(){
-    with(window.event){
-        event.keyCode=0;event.returnValue=false;
-    }
-}
+
+
+// document.onkeydown=function(){
+//     console.log(window.event.keyCode);
+//     with(window.event){
+//         event.keyCode=0;
+//         event.returnValue=false;
+//     }
+// }
 
 document.oncontextmenu = function(){
     event.returnValue = false;
@@ -98,13 +102,16 @@ document.onmousedown = function(e){
 }
 
 document.onkeydown = function(){
-    if( event.ctrlKey ){
-        return false;
-    }
-    if ( event.altKey ){
-        return false;
-    }
-    if ( event.shiftKey ){
-        return false;
-    }
+    // console.log(window.event.keyCode);
+    // if( event.ctrlKey ){
+    //     return false;
+    // }
+    // if ( event.altKey ){
+    //     return false;
+    // }
+    // if ( event.shiftKey ){
+    //     return false;
+    // }
+        event.keyCode=0;
+        event.returnValue=false;
 }

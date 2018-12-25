@@ -112,6 +112,6 @@ document.onkeydown = function(){
     // if ( event.shiftKey ){
     //     return false;
     // }
-        event.keyCode=0;
-        event.returnValue=false;
+    event.keyCode=0;
+    event.returnValue=false;
 }

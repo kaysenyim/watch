@@ -102,7 +102,7 @@ document.onmousedown = function(e){
 }
 
 document.onkeydown = function(){
-    // console.log(window.event.keyCode);
+    console.log(window.event.keyCode);
     // if( event.ctrlKey ){
     //     return false;
     // }
@@ -112,6 +112,8 @@ document.onkeydown = function(){
     // if ( event.shiftKey ){
     //     return false;
     // }
-    event.keyCode=0;
-    event.returnValue=false;
+    if (window.event.keyCode != 122) {
+        event.keyCode=0;
+        event.returnValue=false;
+    }
 }
